@@ -1,0 +1,24 @@
+{
+  "name": "wk2_sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BotondDajka/wk2_SQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BotondDajka/wk2_SQL/issues"
+  },
+  "homepage": "https://github.com/BotondDajka/wk2_SQL#readme",
+  "dependencies": {
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.1",
+    "sqlite3": "^5.0.1"
+  }
+}
