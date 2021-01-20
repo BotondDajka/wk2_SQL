@@ -32,8 +32,13 @@ function loadDatabase(data){
                                                                                     // name (current elements .name) and price (current elements .price)
         }
     }
-
     // You can see we didn't actualy tell SQL the id of any of rows we inserted. Because it's set as a PRIMARY KEY it nows to increment it and set it automaticaly
+
+    insertRestaurant.finalize();
+    insertMenu.finalize();
+    insertItem.finalize();
+
+    db.close();
 }
 
 db.serialize(function () {
