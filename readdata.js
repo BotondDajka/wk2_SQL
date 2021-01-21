@@ -42,11 +42,14 @@ function loadDatabase(data){
 }
 
 db.serialize(function () {
-
         // Create our tables if they don't already exist. "IF NOT EXISTS" make sures for sql not to attempt to create them if they exist breaking our program
         db.run("CREATE TABLE IF NOT EXISTS RESTAURANTS (id INTEGER PRIMARY KEY, name TEXT, imagelink TEXT)");
         db.run("CREATE TABLE IF NOT EXISTS MENUS (id INTEGER PRIMARY KEY, title TEXT, restaurantId INT)");
         db.run("CREATE TABLE IF NOT EXISTS MENU_ITEMS (id INTEGER PRIMARY KEY, menuId INT, name TEXT, price REAL)");
+
+        db.run("DELETE FROM RESTAURANTS")
+        db.run("DELETE FROM MENUS")
+        db.run("DELETE FROM MENU_ITEMS")
 
 
         // Read the given file and call our load function with the converted json data
